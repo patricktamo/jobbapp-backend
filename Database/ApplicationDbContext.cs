@@ -10,7 +10,6 @@ public class ApplicationDbContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        base.OnConfiguring(optionsBuilder);
         if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder.UseMySql("Server=localhost;Database=jobapp_db;User=root;Password=AmehisIkem;", new MySqlServerVersion(new Version(8, 4, 3)));
